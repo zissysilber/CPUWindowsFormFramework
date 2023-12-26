@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Windows.Forms.VisualStyles;
 
 namespace CPUWindowsFormFramework
 {
@@ -62,6 +63,7 @@ namespace CPUWindowsFormFramework
         {
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             grid.RowHeadersWidth = 25;
+            
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 if (col.Name.EndsWith("Id"))
@@ -69,6 +71,7 @@ namespace CPUWindowsFormFramework
                     col.Visible = false;
                 }
             }
+            
             string pkname = tablename + "id";
             if (grid.Columns.Contains(pkname))
             {
