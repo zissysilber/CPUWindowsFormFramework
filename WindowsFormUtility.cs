@@ -72,7 +72,7 @@ namespace CPUWindowsFormFramework
                 }
             }
             
-            string pkname = tablename + "id";
+            string pkname = tablename + "Id";
             if (grid.Columns.Contains(pkname))
             {
                 grid.Columns[pkname].Visible = false;
@@ -107,7 +107,7 @@ namespace CPUWindowsFormFramework
             DataGridViewComboBoxColumn c = new();
             c.DataSource = datasource;
             c.DisplayMember = displaymember;
-            c.ValueMember = tablename + "ID";
+            c.ValueMember = tablename + "Id";
             c.DataPropertyName = c.ValueMember;
             c.HeaderText = tablename;
             grid.Columns.Insert(0, c);
