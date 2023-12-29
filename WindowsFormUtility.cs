@@ -88,8 +88,7 @@ namespace CPUWindowsFormFramework
                     id = (int)grid.Rows[rowindex].Cells[columnname].Value;
                 }
             }
-            //id = (int)gPresident.Rows[rowindex].Cells["PresidentId"].Value; 
-            return id;
+             return id;
         }
 
         public static int GetIdFromComboBox(ComboBox lst)
