@@ -35,6 +35,9 @@ namespace CPUWindowsFormFramework
                 case "dtp":
                     propertyname = "Value";
                     break;
+                case "cbx":
+                    propertyname = "Checked";
+                    break;
 
             }
 
