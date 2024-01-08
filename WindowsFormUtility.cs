@@ -120,7 +120,7 @@ namespace CPUWindowsFormFramework
             grid.Columns.Add(new DataGridViewButtonColumn() { Text = "X", HeaderText = "Delete", Name = deletecolumnname, UseColumnTextForButtonValue = true });
         }
 
-        public static bool IsFormOpen(Type formtype, int pkvalue = 0)
+        public static bool IsFormOpen(Type formtype, int pkvalue)
         {
             bool exists = false;
             foreach (Form frm in Application.OpenForms)
