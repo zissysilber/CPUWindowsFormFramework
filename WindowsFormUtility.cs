@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using System.Windows.Forms.VisualStyles;
+
 
 namespace CPUWindowsFormFramework
 {
@@ -66,7 +66,7 @@ namespace CPUWindowsFormFramework
         {
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             grid.RowHeadersWidth = 25;
-            
+
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 if (col.Name.EndsWith("Id"))
@@ -74,7 +74,7 @@ namespace CPUWindowsFormFramework
                     col.Visible = false;
                 }
             }
-            
+
             string pkname = tablename + "Id";
             if (grid.Columns.Contains(pkname))
             {
@@ -82,7 +82,8 @@ namespace CPUWindowsFormFramework
             }
         }
 
-        public static int GetIdFromGrid(DataGridView grid, int rowindex, string columnname) {
+        public static int GetIdFromGrid(DataGridView grid, int rowindex, string columnname)
+        {
             int id = 0;
             if (rowindex < grid.Rows.Count && grid.Columns.Contains(columnname) && grid.Rows[rowindex].Cells[columnname].Value != DBNull.Value)
             {
@@ -91,17 +92,17 @@ namespace CPUWindowsFormFramework
                     id = (int)grid.Rows[rowindex].Cells[columnname].Value;
                 }
             }
-             return id;
+            return id;
         }
 
         public static int GetIdFromComboBox(ComboBox lst)
         {
             int value = 0;
-            if(lst.SelectedValue != null && lst.SelectedValue is int)
+            if (lst.SelectedValue != null && lst.SelectedValue is int)
             {
                 value = (int)lst.SelectedValue;
             }
-                return value;
+            return value;
         }
 
         public static void AddComboboxToGrid(DataGridView grid, DataTable datasource, string tablename, string displaymember)
@@ -141,6 +142,7 @@ namespace CPUWindowsFormFramework
             return exists;
         }
 
+
         public static void SetupNav(ToolStrip ts)
         {
             ts.Items.Clear();
@@ -157,6 +159,8 @@ namespace CPUWindowsFormFramework
                 }
             }
         }
+
+
         private static void Btn_Click(object? sender, EventArgs e)
         {
             if (sender != null && sender is ToolStripButton)
@@ -168,6 +172,8 @@ namespace CPUWindowsFormFramework
                 }
             }
         }
-    }
 
-}
+
+        }
+
+    }
